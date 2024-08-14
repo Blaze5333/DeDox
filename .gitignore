@@ -78,3 +78,8 @@ yarn-error.log
 !.yarn/versions
 /android/app/google-services.json
 /android/app/build/outputs/apk/debug/app-debug.apk
+# Ignore Android build files
+android/app/build/
+
+# Ignore all .apk files
+*.apk
