@@ -43,4 +43,6 @@
     "typescript": "4.8.4"
   },
   "jest": {
-    "preset":
+    "preset": "react-native"
+  }
+}
