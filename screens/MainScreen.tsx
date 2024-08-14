@@ -42,10 +42,6 @@ export default function MainScreen() {
         <ScrollView contentContainerStyle={styles.scrollContainer}>
           {selectedAccount ? (
             <>
-              <Section title="Sign a transaction">
-                <SignTransactionButton />
-              </Section>
-
               <Section title="Sign a message">
                 <SignMessageButton />
               </Section>
