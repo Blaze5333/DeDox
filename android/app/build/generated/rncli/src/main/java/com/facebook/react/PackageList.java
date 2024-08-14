@@ -13,6 +13,8 @@ import java.util.ArrayList;
 
 // @solana-mobile/mobile-wallet-adapter-protocol
 import com.solanamobile.mobilewalletadapter.reactnative.SolanaMobileWalletAdapterPackage;
+// react-native-biometrics
+import com.rnbiometrics.ReactNativeBiometricsPackage;
 // react-native-get-random-values
 import org.linusu.RNGetRandomValuesPackage;
 // react-native-safe-area-context
@@ -63,6 +65,7 @@ public class PackageList {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(mConfig),
       new SolanaMobileWalletAdapterPackage(),
+      new ReactNativeBiometricsPackage(),
       new RNGetRandomValuesPackage(),
       new SafeAreaContextPackage()
     ));

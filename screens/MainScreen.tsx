@@ -1,3 +1,4 @@
+/*eslint-disable */
 import React, {useCallback, useEffect, useState} from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 
@@ -13,12 +14,14 @@ import DisconnectButton from '../components/DisconnectButton';
 import RequestAirdropButton from '../components/RequestAirdropButton';
 import SignMessageButton from '../components/SignMessageButton';
 import SignTransactionButton from '../components/SignTransactionButton';
+import { checkBiometrics, loginWithBiometrics } from '../components/utils/Biometrics';
+import ReactNativeBiometrics, { BiometryTypes } from 'react-native-biometrics'
 
 export default function MainScreen() {
   const {connection} = useConnection();
   const {selectedAccount} = useAuthorization();
   const [balance, setBalance] = useState<number | null>(null);
-
+  const rnBiometrics = new ReactNativeBiometrics()
   const fetchAndUpdateBalance = useCallback(
     async (account: Account) => {
       console.log('Fetching balance for: ' + account.publicKey);
@@ -30,18 +33,25 @@ export default function MainScreen() {
   );
 
   useEffect(() => {
+    biometrics()
     if (!selectedAccount) {
       return;
     }
     fetchAndUpdateBalance(selectedAccount);
   }, [fetchAndUpdateBalance, selectedAccount]);
-
+const biometrics=async()=>{
+ loginWithBiometrics("1232")
+}
   return (
     <>
       <View style={styles.mainContainer}>
         <ScrollView contentContainerStyle={styles.scrollContainer}>
           {selectedAccount ? (
             <>
+              <Section title="Sign a transaction">
+                <SignTransactionButton />
+              </Section>
+
               <Section title="Sign a message">
                 <SignMessageButton />
               </Section>

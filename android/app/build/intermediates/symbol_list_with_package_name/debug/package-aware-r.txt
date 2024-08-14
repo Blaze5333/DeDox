@@ -36,6 +36,11 @@ animator fragment_fade_enter
 animator fragment_fade_exit
 animator fragment_open_enter
 animator fragment_open_exit
+array assume_strong_biometrics_models
+array crypto_fingerprint_fallback_prefixes
+array crypto_fingerprint_fallback_vendors
+array delay_showing_prompt_models
+array hide_fingerprint_instantly_prefixes
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -397,6 +402,7 @@ color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
+color biometric_error_color
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -544,6 +550,7 @@ dimen compat_notification_large_icon_max_height
 dimen compat_notification_large_icon_max_width
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
+dimen fingerprint_icon_size
 dimen highlight_alpha_material_colored
 dimen highlight_alpha_material_dark
 dimen highlight_alpha_material_light
@@ -662,6 +669,8 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable fingerprint_dialog_error
+drawable fingerprint_dialog_fp_icon
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -779,6 +788,10 @@ id edit_query
 id end
 id expand_activities_button
 id expanded_menu
+id fingerprint_description
+id fingerprint_error
+id fingerprint_icon
+id fingerprint_subtitle
 id fitBottomStart
 id fitCenter
 id fitEnd
@@ -944,6 +957,7 @@ layout abc_tooltip
 layout autofill_inline_suggestion
 layout custom_dialog
 layout dev_loading_view
+layout fingerprint_dialog_layout
 layout fps_view
 layout notification_action
 layout notification_action_tombstone
@@ -1023,6 +1037,18 @@ string catalyst_sample_profiler_enable
 string catalyst_settings
 string catalyst_settings_title
 string combobox_description
+string confirm_device_credential_password
+string default_error_msg
+string fingerprint_dialog_touch_sensor
+string fingerprint_error_hw_not_available
+string fingerprint_error_hw_not_present
+string fingerprint_error_lockout
+string fingerprint_error_no_fingerprints
+string fingerprint_error_user_canceled
+string fingerprint_not_recognized
+string generic_error_no_device_credential
+string generic_error_no_keyguard
+string generic_error_user_canceled
 string header_description
 string image_description
 string imagebutton_description
